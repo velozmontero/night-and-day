@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Night and Day</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+    </head>
+    <body class="backround-img">
+        <div id="mask"></div>
+        <div id="orb" name="orb" class="sun">
+            
+        </div>
+        <button class="btn">click me</button>
+        <script>
+            $(document).ready(function() {
+                $("button").on("click", function(){
+                    if ($("body").hasClass("mask1")) {
+                        $("body").removeClass("mask1");
+                        $("#orb").removeClass("moon");
+                        $('#orb').addClass("sun");
+                    }
+                    else {
+                        $("body").addClass("mask1");
+                        $("#orb").removeClass("sun");
+                        $('#orb').addClass("moon");    
+                    } 
+                });
+            });
+        </script>
+    </body>
+</html>
